@@ -1,9 +1,9 @@
 <template >
     <div>
-        <select v-model="numberOfWords" @change="$emit('changedValue',numberOfWords)" name="numberOfWords" id="numberOfWords" >
-            <option value="1" selected>1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
+        <select v-model="numberOfWords"  name="numberOfWords" id="numberOfWords" >
+            <option @click="$emit('changedValue',numberOfWords)" value="1" selected>1</option>
+            <option @click="$emit('changedValue',numberOfWords)" value="2">2</option>
+            <option @click="$emit('changedValue',numberOfWords)" value="3">3</option>
         </select>
         {{ numberOfWords }}
     </div>
