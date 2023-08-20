@@ -1,7 +1,9 @@
 <template>
     <AppHeader @changedValue="apiCall"/>
-    <div>
-        {{ response }}
+    <div class="container">
+        <div>
+            {{ response }}
+        </div>
     </div>
 </template>
 <script>
@@ -25,6 +27,8 @@ export default {
                 (response) => {
                     this.response += response.data.response
                     console.log(this.response)
+                    this.response += " "
+                    
                 }
             )    
         }
@@ -38,4 +42,12 @@ export default {
 <style lang="scss" scoped>
     @use '../styles/partials/mixins' as*;
     @use '../styles/partials/variables' as*;
+    
+    div.container{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        
+    }
+   
 </style>
